@@ -19,3 +19,7 @@ function delay(oneSec) {
 function oneSec() {
     console.log("1 second has passed");
 }
+const func = (...m) => {
+    return m;
+};
+func(25, 23, 34);

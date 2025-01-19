@@ -26,3 +26,30 @@ function delay (oneSec : () => void) {
 function oneSec() {
     console.log("1 second has passed");
 }
+
+// type FuncType = (n: number, m: number, l?: number) => number;
+
+// // Optional Parameter
+/*const func: FuncType = (n, m, l) => {
+    if (typeof l === "undefined") return n * m;
+  
+    return n * m * l;
+  };*/
+  
+  // func(25, 23);
+  
+  // // Default Parameter
+  /*type FuncType = (n: number, m: number, l?: number) => number;
+  const func: FuncType = (n, m, l = 20) => {
+    return n * m * l;
+  };*/
+  
+  // func(25, 23);
+  
+  // // Rest Operator
+  type FuncType = (...m: number[]) => number[];
+  const func: FuncType = (...m) => {
+    return m;
+  };
+  func(25, 23, 34);
+  
