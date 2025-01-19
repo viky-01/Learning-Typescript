@@ -52,4 +52,42 @@ function oneSec() {
     return m;
   };
   func(25, 23, 34);
+
+  abstract class Shape {
+    abstract name: string;
+  
+    abstract calculateArea(): number;
+  
+    describe(): void {
+      console.log(`This shape is a ${this.name} with an area of ${this.calculateArea()} units squared.`);
+    }
+  }
+  
+  //////////////////////////////////////Rectangle and Circle classes
+  class Rectangle extends Shape {
+    name = "Rectangle";
+  
+    constructor(public width: number, public height: number) {
+      super();
+    }
+  
+    // Implement the abstract method
+    calculateArea(): number {
+      return this.width * this.height;
+    }
+  }
+  
+  // Another subclass implementing the abstract class
+  class Circle extends Shape {
+    name = "Circle";
+  
+    constructor(public radius: number) {
+      super();
+    }
+  
+    // Implement the abstract method
+    calculateArea(): number {
+      return Math.PI * this.radius * this.radius;
+    }
+  }
   
