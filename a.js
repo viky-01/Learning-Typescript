@@ -53,3 +53,8 @@ class Circle extends Shape {
         return Math.PI * this.radius * this.radius;
     }
 }
+const teamLead = {
+    name: "harkirat",
+    startDate: new Date(),
+    department: "Software developer"
+};

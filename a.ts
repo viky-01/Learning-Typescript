@@ -90,4 +90,23 @@ function oneSec() {
       return Math.PI * this.radius * this.radius;
     }
   }
-  
+
+
+///////////////////////////////////   TYPES
+type Employee = {
+  name: string;
+  startDate: Date;
+};
+
+type Manager = {
+  name: string;
+  department: string;
+};
+
+type TeamLead = Employee & Manager;
+
+const teamLead: TeamLead = {
+  name: "harkirat",
+  startDate: new Date(),
+  department: "Software developer"
+};
